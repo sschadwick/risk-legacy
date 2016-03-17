@@ -1,0 +1,86 @@
+/*
+purple: #5F0F40
+red: #9A031E
+yellow: #FB8B24
+orange: #E36414
+blue: #0F4C5C
+parchment: #F1F1D4
+
+*/
+
+body {
+  background-color: #F1F1D4;
+  color: #5F0F40;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.content {
+  margin: 0 auto;
+  width: 95%;
+  max-width: 1200px;
+}
+
+header {
+  width: 100%;
+}
+
+header h1 {
+  font-family: 'Ultra', serif;
+  /*letter-spacing: .1em;*/
+  color: #9A031E;
+  margin: 0;
+  padding: 0;
+  font-size: 42pt;
+}
+
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+header ul li{
+  display: inline-block;
+  float: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+
+}
+header ul li a, header ul li a:visited{
+  color: #FFB877;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 150px;
+  background-color: #5F0F40;
+  padding: 10px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+
+header ul li a:hover{
+  color: #5F0F40;
+  background-color: #E36414;
+
+}
+
+header ul li a:active{
+  color: #FB8B24;
+
+}
+
+.map {
+  clear: both;
+}
+
+.map img {
+  width: 100%;
+  border: 3px solid #0F4C5C;
+  display: block;
+  vertical-align: top;
+
+}
