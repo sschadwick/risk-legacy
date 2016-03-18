@@ -33,7 +33,6 @@ header {
 
 header h1 {
   font-family: 'Ultra', serif;
-  /*letter-spacing: .1em;*/
   color: #9A031E;
   margin: 0;
   padding: 0;
@@ -92,59 +91,96 @@ header ul li a:active{
 
 }
 
+.rules h3 {
+  width: 80%;
+  min-width: 600px;
+  margin-bottom: 10px;
+  margin: 10px auto;
+
+}
+
+.rules table{
+  background-color: #FB8B24;
+  width: 80%;
+  min-width: 600px;
+  text-align: left;
+  margin: 10px auto 10px auto;
+  padding: 3px;
+  color: #F1F1D4;
+
+}
+.rules table tr {
+  background-color: #5F0F40;
+}
+
+.rules table .troops{
+  background-color: #9A031E;
+}
+.rules table th {
+  padding: 5px;
+}
+
+.rules table td {
+  text-align: right;
+  padding: 5px;
+}
+
 /************************************
 SVG Map
 ************************************/
+
+/*#map-svg text{
+  font-family: 'Ultra', serif;
+  color: #9A031E;
+}*/
 
 .country:hover {
   fill: #9A031E;
 }
 
-.st0 {
+.country:hover path, .country:hover polygon{
+  fill: #9A031E;
+}
+
+.connector {
   fill:none;
   stroke:#000000;
-  stroke-dasharray:56,28;
+
 }
-.st1 {
-  fill:none;
-  stroke:#000000;
-}
+
 .st2 {
-  fill:none;
-  stroke:#000000;
   stroke-miterlimit:10;
 }
 
-/* African Countries */
-.st3 {
+.africa path {
   fill:#685A4B;
   stroke:#000000;
 }
-/* Asian Countries */
-.st4, .st5 {
+
+.asia path {
   fill:#519B2A;
  stroke:#000000;
 }
 
-/* European Countries */
-.st6 {
+
+.europe path {
   fill:#1D72D8;
   stroke:#000000;
 }
-/* North American Countries */
-.st7 {
+
+.north-america path {
   fill:#CCAC00;
   stroke:#000000;
 }
 
-/* South American Countries */
-.st8, .st9 {
+
+.south-america path, .south-america polygon {
   fill:#ED7321;
   stroke:#000000;
 }
 
-/* Australian Countries */
-.st10 {
+
+.australia path {
   fill:#84475A;
   stroke:#000000;
 }
