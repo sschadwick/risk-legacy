@@ -129,10 +129,11 @@ header ul li a:active{
 SVG Map
 ************************************/
 
-/*#map-svg text{
+svg text{
   font-family: 'Ultra', serif;
-  color: #9A031E;
-}*/
+  fill: #0F4C5C;
+  font-size: 200%;
+}
 
 .country:hover {
   fill: #9A031E;
