@@ -4,13 +4,30 @@ Color Guide
 /*
 purple: #5F0F40
 red: #9A031E
-yellow: #FB8B24
 orange: #E36414
 blue: #0F4C5C
 parchment: #F1F1D4
-
+Enclave: #69793E
+Saharan: #FB8B24
+Mech: #BA4745
+Khan: #514A47
+Imperial: #6D4168
 */
 
+@font-face {
+  font-family: 'Legacy';
+  src: url('fonts/brush.ttf');
+}
+
+@font-face {
+  font-family: 'Risk Header';
+  src: url('fonts/serif.ttf');
+}
+
+@font-face {
+  font-family: 'Risk Content';
+  src: url('fonts/sans-serif.dfont');
+}
 /************************************
 Layout
 ************************************/
@@ -18,7 +35,13 @@ Layout
 body {
   background-color: #F1F1D4;
   color: #5F0F40;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Risk Content', sans-serif;
+}
+
+.legacy {
+  font-family: 'Legacy', cursive;
+  font-size: 150%;
+  margin: 0;
 }
 
 .content {
@@ -32,12 +55,14 @@ header {
 }
 
 header h1 {
-  font-family: 'Ultra', serif;
+  font-family: 'Risk Header', serif;
   color: #9A031E;
   margin: 0;
   padding: 0;
   font-size: 42pt;
 }
+
+
 
 header ul {
   list-style-type: none;
@@ -126,23 +151,27 @@ header ul li a:active{
   padding: 5px;
 }
 
+section {
+  clear:both;
+}
+
 /************************************
-SVG Map
+Map
 ************************************/
 
 svg text{
-  font-family: 'Ultra', serif;
+  font-family: 'Risk Header', serif;
   fill: #0F4C5C;
   font-size: 200%;
   text-anchor: middle;
 }
 
 .country:hover {
-  fill: #9A031E;
+  fill: #0F4C5C;
 }
 
 .country:hover path, .country:hover polygon{
-  fill: #9A031E;
+  fill: #0F4C5C;
 }
 
 .connector, .line{
@@ -152,7 +181,7 @@ svg text{
 }
 
 #winners text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Risk Content', sans-serif;
   fill: #000000;
   font-size: 70%;
   text-anchor: start;
@@ -197,4 +226,57 @@ svg text{
 .australia path {
   fill:#84475A;
   stroke:#000000;
+}
+
+
+
+
+/************************************
+Factions
+************************************/
+
+
+.faction {
+  padding: 0px 10px 10px 15px;
+  margin: 10px 0;
+  color: #000000;
+}
+
+.flavor {
+  font-style: italic;
+  margin-top: 0;
+}
+
+.power {
+  width: 50%;
+  background-color: #CCCCCC;
+  border: 2px solid #424242;
+  padding: 10px;
+  min-height: 40px;
+}
+
+.level1 {
+  border-color: #aaff80;
+  background-color: #33cc33;
+}
+
+.die-mech{
+  border-left: 15px solid #BA4745;
+}
+
+.saharan {
+  border-left: 15px solid #FB8B24;
+
+}
+
+.khan {
+  border-left: 15px solid #514A47;
+}
+
+.imperial {
+  border-left: 15px solid #6D4168;
+}
+
+.enclave {
+  border-left: 15px solid #69793E;
 }
