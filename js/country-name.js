@@ -42,7 +42,7 @@ var svg = Snap("#svg"),
     newGuinea = Snap("#new-guinea"),
     westernAustralia = Snap("#western-australia"),
     indonesia = Snap("#indonesia"),
-    txt = svg.text(50, 50, '');
+    txt = svg.text(420.95, 70, '');
 
 hoverMe = function(country, name) {
   country.hover(

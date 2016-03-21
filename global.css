@@ -107,6 +107,7 @@ header ul li a:active{
   margin: 10px auto 10px auto;
   padding: 3px;
   color: #F1F1D4;
+  font-size: 120%;
 
 }
 .rules table tr {
@@ -133,6 +134,7 @@ svg text{
   font-family: 'Ultra', serif;
   fill: #0F4C5C;
   font-size: 200%;
+  text-anchor: middle;
 }
 
 .country:hover {
@@ -143,12 +145,23 @@ svg text{
   fill: #9A031E;
 }
 
-.connector {
-  fill:none;
+.connector, .line{
+  fill: none;
   stroke:#000000;
 
 }
 
+#winners text {
+  font-family: 'Montserrat', sans-serif;
+  fill: #000000;
+  font-size: 70%;
+  text-anchor: start;
+}
+
+#winners .title {
+  font-size: 100%;
+  fill: #0F4C5C;
+}
 .st2 {
   stroke-miterlimit:10;
 }
