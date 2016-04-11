@@ -55,7 +55,6 @@ hoverMe = function(country, name) {
   );
 }
 
-
 //Africa
 hoverMe(northAfrica,'North Africa');
 hoverMe(centralAfrica,'Central Africa');

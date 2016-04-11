@@ -24,10 +24,6 @@ Imperial: #6D4168
   src: url('fonts/serif.ttf');
 }
 
-@font-face {
-  font-family: 'Risk Content';
-  src: url('fonts/sans-serif.dfont');
-}
 /************************************
 Layout
 ************************************/
@@ -35,19 +31,7 @@ Layout
 body {
   background-color: #F1F1D4;
   color: #5F0F40;
-  font-family: 'Risk Content', sans-serif;
-}
-
-.legacy {
-  font-family: 'Legacy', cursive;
-  font-size: 150%;
-  margin: 0;
-}
-
-.content {
-  margin: 0 auto;
-  width: 95%;
-  max-width: 1200px;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 header {
@@ -61,8 +45,6 @@ header h1 {
   padding: 0;
   font-size: 42pt;
 }
-
-
 
 header ul {
   list-style-type: none;
@@ -102,6 +84,23 @@ header ul li a:hover{
 header ul li a:active{
   color: #FB8B24;
 
+}
+
+section {
+  clear:both;
+}
+
+
+.legacy {
+  font-family: 'Legacy', cursive;
+  font-size: 150%;
+  margin: 0;
+}
+
+.content {
+  margin: 0 auto;
+  width: 95%;
+  max-width: 1200px;
 }
 
 .map {
@@ -151,9 +150,6 @@ header ul li a:active{
   padding: 5px;
 }
 
-section {
-  clear:both;
-}
 
 /************************************
 Map
@@ -181,7 +177,7 @@ svg text{
 }
 
 #winners text {
-  font-family: 'Risk Content', sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
   fill: #000000;
   font-size: 70%;
   text-anchor: start;
@@ -279,4 +275,91 @@ Factions
 
 .enclave {
   border-left: 15px solid #69793E;
+}
+
+/************************************
+Enter Data
+************************************/
+
+input, textarea, select, button, label {
+  margin: 0;
+  -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+     -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+          box-sizing: border-box;
+}
+
+.form-content{
+  width: 100%;
+}
+.form-entry {
+  width: 65%;
+  margin: 2em auto;
+  min-width: calc(35em * .4);
+  padding: 1em;
+  color: #000;
+  -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+     -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+          box-sizing: border-box;
+}
+
+.form-entry h2, .form-entry h3 {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  margin-top: 0;
+}
+
+.form-entry label h3 {
+  display: inline;
+}
+
+.form-entry ul {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+
+}
+
+.form-entry li {
+  padding: .2em;
+}
+
+.form-entry input[type="submit"]{
+  margin: 2em 0;
+  display: block;
+}
+
+.form-entry input[type="text"] {
+  font-size: 1em;
+}
+
+
+.current-play {
+  border: 2px solid #5F0F40;
+  background-color: rgba(95, 15, 64, .2);
+}
+
+.current-play h2 {
+  color: #5F0F40;
+}
+
+.start-of-play {
+  border: 2px solid #0F4C5C;
+  background-color: rgba(15, 76, 92, .2);
+}
+
+.start-of-play h2 {
+  color: #0F4C5C;
+}
+
+.ongoing-play {
+  border: 2px solid #E36414;
+  background-color: rgba(227, 100, 20, .2);
+}
+
+.ongoing-play h2 {
+  color: #E36414;
+}
+
+.ongoing-play .form-entry-sub {
+  border-top: 1px solid #E36414;
+  padding-top: 1em;
 }
