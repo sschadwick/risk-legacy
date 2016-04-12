@@ -43,7 +43,7 @@ header h1 {
   color: #9A031E;
   margin: 0;
   padding: 0;
-  font-size: 42pt;
+  font-size: 300%;
 }
 
 header ul {
@@ -55,9 +55,9 @@ header ul {
 header ul li{
   display: inline-block;
   float: left;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 10px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-right: 1em;
 
 }
 header ul li a, header ul li a:visited{
@@ -66,12 +66,13 @@ header ul li a, header ul li a:visited{
   text-align: center;
   text-transform: uppercase;
   display: inline-block;
-  width: 150px;
+  width: 10em;
   background-color: #5F0F40;
-  padding: 10px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
+  padding: .5em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  transition: background-color .25s ease;
 }
 
 
@@ -100,7 +101,7 @@ section {
 .content {
   margin: 0 auto;
   width: 95%;
-  max-width: 1200px;
+  max-width: 75em;
 }
 
 .map {
@@ -231,10 +232,13 @@ svg text{
 Factions
 ************************************/
 
+.faction-container {
+  width: 65%;
+}
 
 .faction {
-  padding: 0px 10px 10px 15px;
-  margin: 10px 0;
+  padding: 0 0 .5em 1em;
+  margin-top: 3em;
   color: #000000;
 }
 
@@ -244,16 +248,16 @@ Factions
 }
 
 .power {
-  width: 50%;
+  width: 100%;
   background-color: #CCCCCC;
   border: 2px solid #424242;
-  padding: 10px;
-  min-height: 40px;
+  padding: .5em;
+  min-height: 3em;
 }
 
 .level1 {
-  border-color: #aaff80;
-  background-color: #33cc33;
+  border-color: #33cc33;
+  background-color: #aaff80;
 }
 
 .die-mech{
@@ -293,7 +297,7 @@ input, textarea, select, button, label {
 }
 .form-entry {
   width: 65%;
-  margin: 2em auto;
+  margin: 2em 0;
   min-width: calc(35em * .4);
   padding: 1em;
   color: #000;
