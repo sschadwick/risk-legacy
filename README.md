@@ -30,7 +30,7 @@ Sure, my UI is lovely, but I have a form that's not hooked into anything and no 
  2. Open `index.html` in your browser.
 
 ## Final Notes
-  - You can view an online version of this code on my personal website. I'll try to update that, and I'll be learning along the way.
+  - You can [view an online version of this code on my personal website](http://catheraaine.com/risk-legacy/index.html). I'll try to update that, and I'll be learning along the way.
 
   - This is an educational tool, not for profit, and 100% for personal use. Think of it as super high tech note cards. Please, don't sue me!
 
