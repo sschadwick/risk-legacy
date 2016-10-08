@@ -1,2 +1,11 @@
 node_modules
 build
+
+# Project files of IDE (like WebStorm)
+.idea/
+
+# References
+refs/
+
+# OS-specific files
+.DS_Store

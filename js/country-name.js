@@ -1,110 +1,64 @@
 // Displays country Name on hover
-var svg = Snap("#svg"),
-    northAfrica = Snap("#north-africa"),
-    centralAfrica = Snap("#central-africa"),
-    egypt = Snap("#egypt"),
-    eastAfrica = Snap("#east-africa"),
-    southAfrica = Snap("#south-africa"),
-    madagascar = Snap("#madagascar"),
-    southEastAsia = Snap("#southeast-asia"),
-    china = Snap("#china"),
-    middleEast = Snap("#middle-east"),
-    afghanistan = Snap("#afghanistan"),
-    ural = Snap("#ural"),
-    india = Snap("#india"),
-    irkustk = Snap("#irkustk"),
-    yakutsk = Snap("#yakutsk"),
-    siberia = Snap("#siberia"),
-    kamchatka = Snap("#kamchatka"),
-    mongolia = Snap("#mongolia"),
-    japan = Snap("#japan"),
-    scandinavia = Snap("#scandinavia"),
-    westernEurope = Snap("#western-europe"),
-    southernEurope = Snap("#southern-europe"),
-    northernEurope = Snap("#northern-europe"),
-    russia = Snap("#russia"),
-    iceland = Snap("#iceland"),
-    greatBritain = Snap("#great-britain"),
-    greenland = Snap("#greenland"),
-    alberta = Snap("#alberta"),
-    alaska = Snap("#alaska"),
-    northwestTerritory = Snap("#northwest-territory"),
-    centralAmerica = Snap("#central-america"),
-    easternCanada = Snap("#eastern-canada"),
-    easternUS = Snap("#eastern-us"),
-    ontario = Snap("#ontario"),
-    westernUS = Snap("#western-us"),
-    venezuela = Snap("#venezuela"),
-    peru = Snap("#peru"),
-    argentina = Snap("#argentina"),
-    brazil = Snap("#brazil"),
-    easternAustralia = Snap("#eastern-australia"),
-    newGuinea = Snap("#new-guinea"),
-    westernAustralia = Snap("#western-australia"),
-    indonesia = Snap("#indonesia"),
-    txt = svg.text(420.95, 70, '');
+
+var text = Snap("#svg").text(420.95, 70, '');
+
+var countries = [
+  [ Snap("#north-africa"), 'North Africa' ],
+  [ Snap("#central-africa"), 'Central Africa' ],
+  [ Snap("#egypt"), 'Egypt' ],
+  [ Snap("#east-africa"), 'East Africa' ],
+  [ Snap("#south-africa"), 'South Africa' ],
+  [ Snap("#madagascar"), 'Madagascar' ],
+  [ Snap("#southeast-asia"), 'Southeast Asia' ],
+  [ Snap("#china"), 'China' ],
+  [ Snap("#middle-east"), 'The Middle East' ],
+  [ Snap("#afghanistan"), 'Afghanistan' ],
+  [ Snap("#ural"), "Ural" ],
+  [ Snap("#india"), "India" ],
+  [ Snap("#irkustk"), "Irkutsk" ],
+  [ Snap("#yakutsk"), "Yakutsk" ],
+  [ Snap("#siberia"), "Siberia" ],
+  [ Snap("#kamchatka"), "Kamchatka" ],
+  [ Snap("#mongolia"), "Mongolia" ],
+  [ Snap("#japan"), "Japan" ],
+  [ Snap("#scandinavia"), "Scandinavia" ],
+  [ Snap("#western-europe"), "Western Europe" ],
+  [ Snap("#southern-europe"), "Southern Europe" ],
+  [ Snap("#northern-europe"), "Northern Europe" ],
+  [ Snap("#russia"), "Russia" ],
+  [ Snap("#iceland"), "Iceland" ],
+  [ Snap("#great-britain"), "Great Britain" ],
+  [ Snap("#greenland"), "Greenland" ],
+  [ Snap("#alberta"), "Alberta" ],
+  [ Snap("#alaska"), "Alaska" ],
+  [ Snap("#northwest-territory"), "Northwest Territory" ],
+  [ Snap("#central-america"), "Central America" ],
+  [ Snap("#eastern-canada"), "Eastern Canada" ],
+  [ Snap("#eastern-us"), "Eastern United States" ],
+  [ Snap("#ontario"), "Ontario" ],
+  [ Snap("#western-us"), "Western United States" ],
+  [ Snap("#venezuela"), "Venezuella" ],
+  [ Snap("#peru"), "Peru" ],
+  [ Snap("#argentina"), "Argentina" ],
+  [ Snap("#brazil"), "Brazil" ],
+  [ Snap("#eastern-australia"), "Eastern Australia" ],
+  [ Snap("#new-guinea"), "New Guinea" ],
+  [ Snap("#western-australia"), "Western Australia" ],
+  [ Snap("#indonesia"), "Indonesia" ]
+];
 
 hoverMe = function(country, name) {
   country.hover(
     function() {
-      txt.attr({text:name});
+      text.attr({text:name});
     },
     function() {
-      txt.attr({text:''});
+      text.attr({text:''});
     }
   );
-}
+};
 
-//Africa
-hoverMe(northAfrica,'North Africa');
-hoverMe(centralAfrica,'Central Africa');
-hoverMe(egypt, 'Egypt');
-hoverMe(eastAfrica, 'East Africa');
-hoverMe(southAfrica, 'South Africa');
-hoverMe(madagascar, 'Madagascar');
-
-//Asia
-hoverMe(southEastAsia, 'Southeast Asia');
-hoverMe(china,'China');
-hoverMe(middleEast, 'The Middle East');
-hoverMe(afghanistan, 'Afghanistan');
-hoverMe(ural, 'Ural');
-hoverMe(india, 'India');
-hoverMe(irkustk, 'Irkustk');
-hoverMe(yakutsk, 'Yakutsk');
-hoverMe(siberia, 'Siberia');
-hoverMe(kamchatka, 'Kamchatka');
-hoverMe(mongolia, 'Mongolia');
-hoverMe(japan, 'Japan');
-
-//Europe
-hoverMe(scandinavia, 'Scandinavia');
-hoverMe(westernEurope, 'Western Europe');
-hoverMe(southernEurope, 'Southern Europe');
-hoverMe(northernEurope, 'Northern Europe');
-hoverMe(russia, 'Russia');
-hoverMe(iceland, 'Iceland');
-hoverMe(greatBritain, 'Great Britain');
-
-//North America
-hoverMe(greenland, 'Greenland');
-hoverMe(alberta, 'Alberta');
-hoverMe(alaska, 'Alaska');
-hoverMe(northwestTerritory, 'Northwest Territory');
-hoverMe(centralAmerica, 'Central America');
-hoverMe(easternCanada, 'Eastern Canada');
-hoverMe(easternUS, 'Eastern United States');
-hoverMe(ontario, 'Ontario');
-hoverMe(westernUS, 'Western United States');
-
-//South America
-hoverMe(venezuela, 'Venezuela');
-hoverMe(peru, 'Peru');
-hoverMe(argentina, 'Argentina');
-hoverMe(brazil, 'Brazil');
-
-//Australia
-hoverMe(easternAustralia, 'Eastern Australia');
-hoverMe(newGuinea, 'New Guinea');
-hoverMe(westernAustralia, 'Western Australia');
-hoverMe(indonesia, 'Indonesia');
+// Apply hoverMe function to every country in the list
+countries.forEach(function(pair) {
+  hoverMe(pair[0], pair[1])
+});

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link href="global.css" rel="stylesheet" type="text/css" />
+  <link href="css/global.css" rel="stylesheet" type="text/css" />
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <title>
@@ -25,8 +25,8 @@
         <h2>Current Play</h2>
         <form>
           <h3>Map Status</h3>
-          <label for="country">Country: </label>
-          <select name="country">
+          <h4><label for="country">Country: </label></h4>
+          <select id="country">
             <optgroup label="Africa">
               <option>Central Africa</option>
               <option>East Africa</option>
@@ -88,17 +88,18 @@
               <option>Venezuela</option>
             </optgroup>
           </select>
-          <ul class="radio-list">
-            <li><label for="factions">Faction Control:</label></li>
-            <li><input type="radio" name="factions" value="mech"> Die Mechaniker</li>
-            <li><input type="radio" name="factions" value="bear"> Enclave of the Bear</li>
-            <li><input type="radio" name="factions" value="imp"> Imperial Balkania</li>
-            <li><input type="radio" name="factions" value="khan"> Khan Industries</li>
-            <li><input type="radio" name="factions" value="saha"> The Saharan Republic</li>
+
+          <h4>Faction Control:</h4>
+          <ul class="radio-list" id="factions">
+            <li><input type="radio" value="mech"> Die Mechaniker</li>
+            <li><input type="radio" value="bear"> Enclave of the Bear</li>
+            <li><input type="radio" value="imp"> Imperial Balkania</li>
+            <li><input type="radio" value="khan"> Khan Industries</li>
+            <li><input type="radio" value="saha"> The Saharan Republic</li>
           </ul>
           <label for="troops">Current Troops:</label>
-          <input type="text" name="troops" size="5" value="">
-          <input type="submit" name="current-play" value="Update Map">
+          <input type="text" id="troops" size="5" value="">
+          <input type="submit" id="current-play" value="Update Map">
         </form>
       </section>
 
@@ -109,7 +110,7 @@
           <ul>
             <li>
               <label for="mech-hq">Die Mechaniker:</label>
-              <select name="mech-hq">
+              <select id="mech-hq">
                 <optgroup label="Africa">
                   <option>Central Africa</option>
                   <option>East Africa</option>
@@ -174,7 +175,7 @@
             </li>
             <li>
               <label for="bear-hq">Enclave of the Bear:</label>
-              <select name="bear-hq">
+              <select id="bear-hq">
                 <optgroup label="Africa">
                   <option>Central Africa</option>
                   <option>East Africa</option>
@@ -239,7 +240,7 @@
             </li>
             <li>
               <label for="imp-hq">Imperial Balkania:</label>
-              <select name="imp-hq">
+              <select id="imp-hq">
                 <optgroup label="Africa">
                   <option>Central Africa</option>
                   <option>East Africa</option>
@@ -304,7 +305,7 @@
             </li>
             <li>
               <label for="khan-hq">Khan Industries:</label>
-              <select name="khan-hq">
+              <select id="khan-hq">
                 <optgroup label="Africa">
                   <option>Central Africa</option>
                   <option>East Africa</option>
@@ -369,7 +370,7 @@
             </li>
             <li>
               <label for="saha-hq">The Saharan Republic:</label>
-              <select name="saha-hq">
+              <select id="saha-hq">
                 <optgroup label="Africa">
                   <option>Central Africa</option>
                   <option>East Africa</option>
@@ -444,7 +445,7 @@
         <form class="form-entry-sub">
           <h3>Scars, Cities, and Other Marks</h3>
           <label for="ongoing-country">Country:</label>
-          <select name="ongoing-country">
+          <select id="ongoing-country">
             <optgroup label="Africa">
               <option>Central Africa</option>
               <option>East Africa</option>
@@ -510,7 +511,7 @@
           <ul>
             <li>
               <label for="scar">Scar:</label>
-              <select name="scar">
+              <select id="scar">
                 <option>Ammo Shortage</option>
                 <option>Bunker</option>
               </select>
@@ -518,7 +519,7 @@
 
             <li>
               <label for="city">City:</label>
-              <select name="city">
+              <select id="city">
                 <option>Major City</option>
                 <option>Fortified Major City</option>
                 <option>Minor City</option>
@@ -532,7 +533,7 @@
         <form class="form-entry-sub">
           <h3>Continent Control</h3>
           <label for="continent">Continent:</label>
-          <select name="continent">
+          <select id="continent">
             <option>Africa</option>
             <option>Asia</option>
             <option>Australia</option>
@@ -544,11 +545,11 @@
           <ul>
             <li>
               <label for="named-continent">Named:</label>
-              <input type="text" name="named-continent">
+              <input type="text" id="named-continent">
             </li>
             <li>
               <label for="named-by">Named By (Initials):</label>
-              <input type="text" name="named-by" size="4" value="">
+              <input type="text" id="named-by" size="4" value="">
             </li>
           </ul>
 
@@ -560,7 +561,7 @@
           <ul>
             <li>
               <label for="game-number">Game Number: </label>
-              <select name="game-number">
+              <select id="game-number">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -580,10 +581,10 @@
             </li>
             <li>
               <label for="winner-name">Winner's Name:</label>
-              <input type="text" name="winner-name" size="20">
+              <input type="text" id="winner-name" size="20">
             </li>
           </ul>
-          <input type="submit" name="ongoing-play-winners" value="Update Map">
+          <input type="submit" id="ongoing-play-winners" value="Update Map">
 
         </form>
       </section>
